@@ -163,8 +163,8 @@ if ('getBattery' in navigator) {
 }
 </script>
 <script type="text/javascript">
-const RAM = navigator.deviceMemory;
-document.getElementById('device_ram').innerHTML = RAM;
+let RAM = navigator.deviceMemory;
+document.getElementById('device_ram').innerHTML = 'Всего: ' + RAM + ' ГБ';
 </script>
 <script type="text/javascript">
 function bt1() {
