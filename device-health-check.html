@@ -68,6 +68,9 @@ div.separator {
 <div class="separator"></div>
 <h2>Полноэкранный режим</h2>
 <button onclick="fullScreen1()" id="fs">Перейти</button>
+<div class="separator"></div>
+<h2>Оперативная память (RAM)</h2>
+<p id="device_ram"></p>
 
 <!-- Скрипты -->
 <script type="text/javascript">
@@ -158,6 +161,10 @@ if ('getBattery' in navigator) {
 } else {
   ChromeSamples.setStatus('Battery Status API не поддерживается в этом браузере.');
 }
+</script>
+<script type="text/javascript">
+const RAM = navigator.deviceMemory;
+document.getElementById('device_ram').innerHTML = RAM;
 </script>
 <script type="text/javascript">
 function bt1() {
