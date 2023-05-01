@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru" dir="ltr">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <title>Проверка состояния устройства</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="skyblue">
@@ -12,7 +12,7 @@ body {
  background-color: white;
  color: black;
  margin: 0;
- font-family: 'Arial';
+ font-family: 'Arial', 'Roboto', 'Segoe UI';
 }
 h1 {
  color: navy;
@@ -71,13 +71,13 @@ div.separator {
 <button onclick="fullScreen1()" id="fs">Перейти</button>
 <div class="separator"></div>
 <h2>Оперативная память (RAM)</h2>
-<p id="device_ram"></p>
+<p>Всего: <strong id="device_ram"></strong>/p>
 
 <!-- Скрипты -->
 <script type="text/javascript">
 // Для тестов
 function sV1() {
- window.navigator.vibrate(200, 200); // Вибрировать 200 мс
+ window.navigator.vibrate(200, 200); // Провибрировать 200 мс
 }
  function fullScreen(element) {
   if(element.requestFullscreen) {
@@ -165,7 +165,7 @@ if ('getBattery' in navigator) {
 </script>
 <script type="text/javascript">
 let RAM = navigator.deviceMemory;
-document.getElementById('device_ram').innerHTML = 'Всего: <strong>' + RAM + ' ГБ</strong>';
+document.getElementById('device_ram').innerHTML = '' + RAM + ' ГБ';
 </script>
 <script type="text/javascript">
 function bt1() {
